@@ -1,0 +1,132 @@
+/*!Theme colors, fonts, and patterns
+*
+* Table of Contents
+*
+* Theme Colors
+*  --Primary
+*  --Variations
+*
+* Typography
+*  --Base size
+*  --Fonts
+*  --Defaults
+*
+*/
+
+
+
+/*
+Theme Colors
+*/
+//Primary
+$brandColor:        #8c0000; //Green
+$white:             #fff;
+$black:             #252525;
+// $accentColor: #252525;
+// $lightGray: #252525;
+
+//Variations
+
+
+//Common breakpoints
+$puddle:    320px;
+$creek:     360px;
+$pool:      525px;
+$stream:    600px;
+$pond:      768px;
+$lake:      960px;
+$river:     1024px;
+$bay:       1100px;
+$sea:       1280px;
+$gulf:      1440px;
+$ocean:     1900px;
+
+$upto-puddle:    $puddle - 1;
+$upto-creek:     $creek - 1;
+$upto-pool:      $pool - 1;
+$upto-stream:    $stream - 1;
+$upto-pond:      $pond - 1;
+$upto-lake:      $lake - 1;
+$upto-river:     $river - 1;
+$upto-bay:       $bay - 1;
+$upto-sea:       $sea - 1;
+$upto-gulf:      $gulf - 1;
+$upto-ocean:     $ocean - 1;
+
+
+
+/*
+Typography
+*/
+//Base Size
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+//Fonts
+$headlineFont:   "refrigerator-deluxe",sans-serif;
+$subHeadFont:    "proxima-nova",sans-serif;
+$bodyFont:       "ff-tisa-web-pro",serif;
+
+
+//time
+$time: 0.2s;
+
+
+//Spacing
+$margin: em(60px);
+
+h1, h2 {
+
+}
+
+h3 {
+
+}
+
+a{
+    cursor: pointer !important;
+}
+a,
+svg {
+  @include transition(all 0.8s);
+}
+
+::-webkit-input-placeholder {
+   color: transparentize($brandColor, 0.5);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: transparentize($brandColor, 0.5);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: transparentize($brandColor, 0.5);
+}
+
+:-ms-input-placeholder {
+   color: transparentize($brandColor, 0.5);
+}
+
+::selection {
+  background: $brandColor; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: $brandColor; /* Gecko Browsers */
+  color: #fff;
+}
+
+
+
+//Defaults
+html,
+body {
+  height: 100%;
+}
+body {
+  padding: 0;
+}

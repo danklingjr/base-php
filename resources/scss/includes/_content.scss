@@ -1,0 +1,128 @@
+//Hero
+.hero--home{
+	height: 80%;
+	background-image:    url(../images/hero-gym.jpg);
+	background-size:     cover;
+	background-position: center center;
+	margin-top: 55px;
+}
+.hero--page{
+	height: 400px;
+	background-image:    url(../images/hero-gym.jpg);
+	margin-top: 55px;
+}
+.hero__text{
+	display: block;
+	max-width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translatey(-50%);
+	text-align: left;
+	padding-left: 15%;
+	span,
+	b,
+	i{
+		display: block;
+		font-family: $headlineFont;
+		line-height: 1em;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	span{
+	  font-size: em(50);
+		letter-spacing: 0.15em;
+	}
+	b{
+		display: inline-block;
+		font-size: em(150);
+		font-weight: 900;
+		letter-spacing: 0em;
+		background-color: $brandColor;
+		padding: 5px 20px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.hero--home &{
+			font-size: em(150);
+		}
+		.hero--page &{
+			font-size: em(80);
+		}
+	}
+
+
+	i{
+		font-size: em(22);
+		font-style: normal;
+		letter-spacing: 0.15em;
+	}
+}
+
+
+
+
+//Main
+.main{
+	background-color: #fff;
+}
+
+.intro{
+	padding: em(80) 5%;
+	text-align: center;
+	h1{
+		margin-bottom: em(10);
+	}
+	p{
+		width: 100%;
+		max-width: em(850);
+		font-family: $bodyFont;
+		font-size: em(18);
+		line-height: 1.8em;
+		margin: em(40) auto 0;
+	}
+}
+
+
+
+
+//Service
+.service--home{
+	min-height: 408px;
+	padding-left: 15%;
+	background-size: cover;
+	background-position: center center;
+	div{
+		display: block;
+		position: relative;
+		top: 50%;
+		transform: translatey(100%);
+	}
+	h2,
+	p{
+		font-family: $headlineFont;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	h2{
+		display: inline-block;
+		font-size: em(70);
+		font-weight: 900;
+		background-color: $brandColor;
+		padding: 5px 20px;
+		margin-bottom: 10px;
+	}
+	p{
+		font-size: em(22);
+		font-weight: 400;
+		letter-spacing: 0.15em;
+		margin: 0;
+	}
+}
+.the-gym{
+	background-image: url(../images/the-gym.jpg);
+}
+.fighting-fitness{
+	background-image: url(../images/fighting-fit.jpg);
+}
+.ring-rental{
+	background-image: url(../images/ring-rental.jpg);
+}

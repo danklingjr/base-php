@@ -1,0 +1,33 @@
+{
+  "name": "front-end-groundwork",
+  "version": "1.0.0",
+  "authors": [
+    "Daniel Kling <danielklingjr@gmail.com>"
+  ],
+  "description": "A front end dev groundwork with Bourbon and SCSS",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "SCSS",
+    "SASS",
+    "Front",
+    "end",
+    "dev",
+    "Bourbon"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/danklingjr/base#readme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.2.0",
+    "highlightjs": "^9.1.0"
+  }
+}

@@ -1,0 +1,135 @@
+//Bourbon Grid (wrap each section in <section> tags and add class col-# to inner divs)
+section {
+    @include outer-container;
+    max-width: 100% !important;
+}
+.col-12 {
+    @include span-columns(12);
+    float: none;
+}
+.col-11 {
+    @include span-columns(11);
+}
+.col-10 {
+    @include span-columns(10);
+}
+.col-9 {
+    @include span-columns(9);
+}
+.col-8 {
+    @include span-columns(6);
+    @media screen and (min-width: em(1024)){
+        @include span-columns(8);
+    }
+}
+.col-7 {
+    @include span-columns(7);
+}
+.col-6 {
+    @include span-columns(6);
+}
+.col-6:nth-of-type(2n){
+	margin-right: 0;
+}
+.col-5 {
+    @include span-columns(5);
+}
+.col-4 {
+    @include span-columns(12);
+    
+    @media screen and (min-width: em(1024)){
+        @include span-columns(4);
+    }
+}
+@media screen and (max-width: em(1023)){
+    .col-4{
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: em(1024)){
+    .col-4:nth-of-type(3n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: em(800)) and (max-width: em(1023)){
+    .col-4:nth-of-type(2n){
+        margin-right: 0;
+    }
+}
+
+.col-3 {
+    @include span-columns(12);
+    @media screen and (min-width: em(600)){
+        @include span-columns(6);
+    }
+    @media screen and (min-width: em(960)){
+        @include span-columns(3);
+    }
+}
+
+.col-3:nth-of-type(4n){
+	margin-right: 0;
+}
+@media screen and (max-width: em(959)){
+    .col-3:nth-of-type(2n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: em(600)){
+    .box--service.col-3{
+        @include span-columns(6);
+        flex: 1 1 48.82117%;
+    }
+    
+}
+@media screen and (max-width: em(1139)){
+    .box--service.col-3:nth-of-type(2n){
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: em(599)){
+    .box--service.col-3{
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: em(1140)){
+    .box--service.col-3{
+        @include span-columns(3);
+            flex: 1 1 23.23176%;
+    }
+    .box--service.col-3:nth-of-type(4n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: em(600)) and (max-width: em(1139)){
+    .box--service.col-3{
+        margin: 0 0.5% 5.35765% !important;
+    }
+}
+
+.gallery--single.col-3{
+    margin-right: 0;
+    width: 100%;
+    padding: 10px;
+}
+@media screen and (min-width: em(600)){
+    .gallery--single.col-3{
+        margin-right: 0;
+        width: 50%;
+        padding: 10px;
+    }
+}
+@media screen and (min-width: em(960)){
+    .gallery--single.col-3{
+        margin-right: 0;
+        width: 25%;
+        padding: 10px;
+    }
+}
+.col-2 {
+    @include span-columns(2);
+}
+.col-1 {
+    @include span-columns(1); 
+}
