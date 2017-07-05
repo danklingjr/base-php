@@ -1,5 +1,5 @@
 {
-  "name": "front-end-groundwork",
+  "name": "base-php",
   "version": "1.0.0",
   "description": "A gulp based front end dev groundwork with error reporting and notifications",
   "main": "gulpfile.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tehtrav/front-end-groundwork.git"
+    "url": "git+https://github.com/danklingjr/base-php.git"
   },
   "keywords": [
     "gulp",
@@ -35,7 +35,7 @@
   "author": "Daniel Kling",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danklingjr/base/issues"
+    "url": "https://github.com/danklingjr/base-php/issues"
   },
-  "homepage": "https://github.com/danklingjr/base#readme"
+  "homepage": "https://github.com/danklingjr/base-php#readme"
 }
