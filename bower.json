@@ -1,5 +1,5 @@
 {
-  "name": "front-end-groundwork",
+  "name": "base-php",
   "version": "1.0.0",
   "authors": [
     "Daniel Kling <danielklingjr@gmail.com>"
@@ -17,7 +17,7 @@
     "Bourbon"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/danklingjr/base#readme",
+  "homepage": "https://github.com/danklingjr/base-php#readme",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -26,7 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.6",
+    "bourbon": "^4.3.4",
+    "neat": "^2.1.0",
     "jquery": "^2.2.0",
     "highlightjs": "^9.1.0"
   }
