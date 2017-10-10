@@ -5,20 +5,21 @@
 // https://github.com/mikaelbr/gulp-notify/issues/81
 // ------------------------------------------------------------------------------------
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var plumber = require('gulp-plumber');
-var minifycss = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var gzip = require('gulp-gzip');
-var livereload = require('gulp-livereload');
-var notify = require("gulp-notify");
-var gutil = require("gulp-util");
-var sourcemaps = require("gulp-sourcemaps");
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const sass = require('gulp-sass');
+const watch = require('gulp-watch');
+const plumber = require('gulp-plumber');
+const minifycss = require('gulp-minify-css');
+const rename = require('gulp-rename');
+const gzip = require('gulp-gzip');
+const livereload = require('gulp-livereload');
+const notify = require("gulp-notify");
+const gutil = require("gulp-util");
+const sourcemaps = require("gulp-sourcemaps");
 
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 var gzip_options = {
     threshold: '1kb',
@@ -69,7 +70,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('build/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        //.pipe(sourcemaps.write())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css'))
         .pipe(gzip(gzip_options))
         .pipe(gulp.dest('build/css'))
@@ -78,12 +79,17 @@ gulp.task('styles', function () {
         .pipe(livereload());
 });
 
-gulp.task('scripts', function() {
-    return gulp.src(['bower_components/jquery/dist/jquery.js','resources/js/theme.js'])
-      .pipe(concat('all.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest('build/js/'))
-});
+gulp.task('scripts', () =>
+    gulp.src(['bower_components/jquery/dist/jquery.js','resources/js/theme.js'])
+        .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('build/js/'))
+);
 
 gulp.task('shivs', function() {
     return gulp.src(['resources/js/includes/html5-3.6-respond-1.4.2.min.js'])
