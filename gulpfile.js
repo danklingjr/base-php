@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------------
 
 const gulp = require('gulp');
-const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
@@ -64,7 +63,7 @@ gulp.task('styles', function () {
     return gulp.src('resources/scss/*.scss')
     .pipe(plumber({
         errorHandler: reportError
-    }))
+    })) 
     .pipe(sourcemaps.init())
     .pipe(sass())
         .pipe(gulp.dest('build/css'))
@@ -82,9 +81,6 @@ gulp.task('styles', function () {
 gulp.task('scripts', () =>
     gulp.src(['bower_components/jquery/dist/jquery.js','resources/js/theme.js'])
         .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['env']
-        }))
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
