@@ -63,7 +63,7 @@ gulp.task('styles', function () {
     return gulp.src('resources/scss/*.scss')
     .pipe(plumber({
         errorHandler: reportError
-    })) 
+    }))
     .pipe(sourcemaps.init())
     .pipe(sass())
         .pipe(gulp.dest('build/css'))

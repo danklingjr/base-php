@@ -92,7 +92,7 @@ a{
 }
 a,
 svg {
-  @include transition(all 0.8s);
+  transition: .3s ease-in-out;
 }
 
 ::-webkit-input-placeholder {
